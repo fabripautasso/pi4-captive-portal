@@ -1,0 +1,26 @@
+[ req ]
+default_bits           = 4096
+days                   = 9999
+distinguished_name     = req_distinguished_name
+attributes             = req_attributes
+prompt                 = no
+x509_extensions        = v3_ca
+
+[ req_distinguished_name ]
+C                      = US
+ST                     = NY
+L                      = New York
+O                      = Portal
+OU                     = Engineering
+CN                     = portal-mobile
+emailAddress           = certs@portal.com
+
+[ req_attributes ]
+challengePassword      = portal1234
+
+[ v3_ca ]
+authorityInfoAccess = @issuer_info
+
+[ issuer_info ]
+OCSP;URI.0 = http://ocsp.portal.com/
+caIssuers;URI.0 = http://portal.com/ca.cert

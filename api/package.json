@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "ssid login api",
+  "main": "app.js",
+  "author": "Fabricio Pautasso",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
